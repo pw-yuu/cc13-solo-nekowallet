@@ -38,7 +38,7 @@ export default function Card() {
                 <div key={transc.id} className="display-cards">
                     <section>{transc.created_at}</section>
                     <section>{transc.type}</section>
-                    <section>{transc.transac}</section>
+                    <section>{transc.transac}$</section>
                     <button className="btn-delete" onClick={() => deleteTransac(transc.id)}>Delete</button>
                 </div>
             );

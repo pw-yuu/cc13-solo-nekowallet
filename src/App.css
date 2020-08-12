@@ -68,6 +68,7 @@
 .display-balance {
   color: #309135;
   font-weight: bolder;
+  font-size: 30px;
 }
 
 #select-type {
