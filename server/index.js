@@ -36,7 +36,7 @@ app.get("/transactions", async (req, res) => {
     }
 });
 
-app.post("/add", async (req, res) => {
+app.post("/transactions/add", async (req, res) => {
     try {
         console.log("this is req.body", req.body);
         await db("transactions").insert(req.body);

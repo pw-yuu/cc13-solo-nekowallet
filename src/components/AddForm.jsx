@@ -11,11 +11,11 @@ export default function AddForm () {
         e.preventDefault();
         try {
             const body = { type, transac, year, month };
-            const response = await fetch("/add", {
+            const response = await fetch("/transactions/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)
-            })
+            });
 
             console.log(response);
         } catch (err) {
@@ -26,7 +26,7 @@ export default function AddForm () {
         e.preventDefault();
         try {
             const body = { type, transac: -transac, year, month };
-            const response = await fetch("/add", {
+            const response = await fetch("/transactions/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)
