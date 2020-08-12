@@ -12,15 +12,22 @@ export default function Balance() {
     }
     
     useEffect(() => {
-            getData();
-            displayBalance()
+        getData();
+        displayBalance();
     }, [transc]);
-
+    
+    
+    
     function displayBalance() {
         let balance = 0;
         for (let ele of transc) {
             balance += Number(ele.transac);
         }
+
+        // if(balance < 3000) {
+        //     Notification.requestPermission();
+        //     new Notification("Hi there!");
+        // }
 
         return balance
     };
@@ -28,7 +35,7 @@ export default function Balance() {
     return (
     <div className="balance">
         <div>
-            Balance: <span className="display-balance">{displayBalance()}$</span>
+            Balance:   <span className="display-balance">{displayBalance()}$</span>
         </div>
     </div>
     )

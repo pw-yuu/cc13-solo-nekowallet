@@ -2,10 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const db = require("./knex");
+const path = require("path")
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 9000;
-
+app.use(express.static(path.resolve(__dirname, "..", "build")));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
