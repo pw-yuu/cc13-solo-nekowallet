@@ -8,20 +8,29 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .heart {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.heart {
+  margin-left: 10px;
 }
 
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-weight: bold;
   color: white;
+}
+
+.header-wallet {
+  margin-left: 8px;
+  color: #309135;
 }
 
 .App-link {
@@ -37,6 +46,91 @@
   }
 }
 
+.balance-add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+
+
+.balance {
+  margin-right: 50px;
+  height: 50px;
+  width: 200px;
+  border-bottom: 1px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-balance {
+  color: #309135;
+  font-weight: bolder;
+}
+
+#select-type {
+  height: 53px;
+}
+
+#add-transac {
+  height: 51px;
+  width: 400px;
+  text-align: center;
+  font-weight: bold;
+  border: 1.5px #309135 solid;
+  margin: 1px;
+  border-radius: 2px;
+}
+
+#add-transac:focus {
+  border: #309135;
+}
+
+.btn-add {
+  width: 10em;
+  height: 53px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 5px 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  color: white;
+  background: #309135;
+  border-radius: 5px;
+
+}
+
+.btn-add:hover {
+  color: white;
+  background: #309135;
+  border-radius: 5px;
+}
+
+.allcards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
 .display-cards{
+  margin: 10px;
+  padding: 10px;
   border: 1px black solid;
 }

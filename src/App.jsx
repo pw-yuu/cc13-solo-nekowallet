@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 
 import Balance from './components/Balance';
 import AddForm from './components/AddForm'
@@ -14,12 +13,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        ❤
+        Neko <span className="heart">❤</span><span className="header-wallet">Wallet</span>
       </header>
-      
-      <Balance />
-      <AddForm />
+      <div className="balance-add-container">
+        <Balance />
+        <AddForm />
+      </div>
+      <div className="allcards-container">
       <Card />
+      </div>
     </div>
   );
 }

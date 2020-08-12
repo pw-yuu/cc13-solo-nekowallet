@@ -36,7 +36,6 @@ export default function Card() {
         return transc.map((transc) => {
             return (
                 <div key={transc.id} className="display-cards">
-                    <section>{transc.id}</section>
                     <section>{transc.created_at}</section>
                     <section>{transc.type}</section>
                     <section>{transc.transac}</section>
@@ -48,7 +47,7 @@ export default function Card() {
 
 
     return (
-        <div>
+        <div className="cards-container">
             {displayCards()}
         </div>
     )

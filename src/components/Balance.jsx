@@ -26,8 +26,10 @@ export default function Balance() {
     };
 
     return (
-    <div>
-        balance: {displayBalance()}$
+    <div className="balance">
+        <div>
+            Balance: <span className="display-balance">{displayBalance()}$</span>
+        </div>
     </div>
     )
 }
