@@ -8,7 +8,7 @@ export default function Card() {
     //Delete transaction function
     const deleteTransac = async (id) => {
         try {
-            const deleteTransac = await fetch(`http://localhost:3000/transactions/${id}`, {
+            const deleteTransac = await fetch(`/transactions/${id}`, {
                 method:"DELETE"
             });
 

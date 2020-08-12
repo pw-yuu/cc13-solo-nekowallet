@@ -11,7 +11,7 @@ export default function AddForm () {
         e.preventDefault();
         try {
             const body = { type, transac, year, month };
-            const response = await fetch("http://localhost:3000/add", {
+            const response = await fetch("/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)
@@ -26,7 +26,7 @@ export default function AddForm () {
         e.preventDefault();
         try {
             const body = { type, transac: -transac, year, month };
-            const response = await fetch("http://localhost:3000/add", {
+            const response = await fetch("/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)
