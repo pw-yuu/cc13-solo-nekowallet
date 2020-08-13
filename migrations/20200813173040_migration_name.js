@@ -2,7 +2,7 @@ exports.up = function(knex) {
     return knex.schema
         .createTable("transactions", function(table) {
             table.increments("id")
-            table.timestamp("created_at").defaultTo(knex.fn.now())
+            table.string('created_at')
             table.integer("year")
             table.integer("month")
             table.string("type")

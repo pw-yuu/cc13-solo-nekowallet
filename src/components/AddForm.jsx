@@ -4,6 +4,7 @@ export default function AddForm () {
 
     const [type, setType] = useState(undefined);
     const [transac, setTransac] =useState();
+    const created_at = new Date();
     const year = new Date().getFullYear();
     const month = new Date().getMonth() + 1;
 
@@ -18,8 +19,8 @@ export default function AddForm () {
             return;
         }
         try {
-            const body = { type, transac, year, month };
-            const response = await fetch("/transactions/add", {
+            const body = {created_at, type, transac, year, month };
+            await fetch("/transactions/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)
@@ -40,8 +41,8 @@ export default function AddForm () {
             return;
         }
         try {
-            const body = { type, transac: -transac, year, month };
-            const response = await fetch("/transactions/add", {
+            const body = {created_at, type, transac: -transac, year, month };
+            await fetch("/transactions/add", {
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: JSON.stringify(body)

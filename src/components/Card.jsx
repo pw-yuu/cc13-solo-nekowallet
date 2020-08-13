@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Moment from 'react-moment';
+
 
 export default function Card() {
+    Moment.globalFormat = 'D MMM YYYY HH:mm:ss';
+
     const [transc, setTransc] = useState([]);
     // const [boolean, setBoolean] = useState(false);
 
     //Delete transaction function
     const deleteTransac = async (id) => {
         try {
-            const deleteTransac = await fetch(`/transactions/${id}`, {
+            await fetch(`/transactions/${id}`, {
                 method:"DELETE"
             });
 
@@ -36,9 +40,9 @@ export default function Card() {
         return transc.map((transc) => {
             return (
                 <div key={transc.id} className="display-cards">
-                    <section>{transc.created_at}</section>
                     <section>{transc.type}</section>
                     <section>{transc.transac}$</section>
+                    <section><Moment >{transc.created_at}</Moment></section>
                     <button className="btn-delete" onClick={() => deleteTransac(transc.id)}>Delete</button>
                 </div>
             );

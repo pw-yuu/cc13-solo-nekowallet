@@ -30,7 +30,7 @@
 
 .header-wallet {
   margin-left: 8px;
-  color: #309135;
+  color: #43cc1d;
 }
 
 .App-link {
@@ -66,7 +66,7 @@
 }
 
 .display-balance {
-  color: #309135;
+  color: #43cc1d;
   font-weight: bolder;
   font-size: 30px;
   margin-left: 10px;
@@ -81,13 +81,13 @@
   width: 400px;
   text-align: center;
   font-weight: bold;
-  border: 1.5px #309135 solid;
+  border: 1.5px #43cc1d solid;
   margin: 1px;
   border-radius: 2px;
 }
 
 #add-transac:focus {
-  border: #309135;
+  border: #43cc1d;
 }
 
 .btn-add {
@@ -104,14 +104,14 @@
 }
 .btn-delete:hover {
   color: white;
-  background: #309135;
+  background: #43cc1d;
   border-radius: 5px;
 
 }
 
 .btn-add:hover {
   color: white;
-  background: #309135;
+  background: #43cc1d;
   border-radius: 5px;
 }
 
@@ -134,6 +134,6 @@
 .display-cards{
   margin: 10px;
   padding: 20px;
-  border: 2px #309135 solid;
+  border: 2px #43cc1d solid;
   border-radius: 10px;
 }

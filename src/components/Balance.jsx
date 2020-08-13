@@ -16,8 +16,6 @@ export default function Balance() {
         displayBalance();
     }, [transc]);
     
-    
-    
     function displayBalance() {
         let balance = 0;
         for (let ele of transc) {
