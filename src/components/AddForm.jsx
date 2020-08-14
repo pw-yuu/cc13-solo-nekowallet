@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function AddForm () {
 
@@ -9,7 +9,6 @@ export default function AddForm () {
     const month = new Date().getMonth() + 1;
 
     const onSubmitForm = async (e) => {
-
         if (!transac || type === undefined) {
             alert("Please select type and amount of transaction.");
             return;
@@ -27,10 +26,12 @@ export default function AddForm () {
             });
             setType(undefined);
             setTransac("");
+            console.log('hello')
         } catch (err) {
             console.error("Error adding transactions!", err)
         }
     }
+
     const onSubmitFormMinus = async (e) => {
         if (!transac || type === undefined) {
             alert("Please select type and amount of transaction.");

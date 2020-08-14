@@ -18,14 +18,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   font-weight: bold;
-  color: white;
+  color: rgb(119, 119, 119);
 }
 
 .header-wallet {
@@ -44,6 +43,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-container {
+  border: 1px black solid;
 }
 
 .balance-add-container {
