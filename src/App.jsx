@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 import Balance from './components/Balance';
 import AddForm from './components/AddForm'
@@ -10,6 +11,14 @@ import './App.css';
 
 function App() {
 
+  const [drag, setDrag] = useState({
+    isScrolling: false,
+    clientX: 0,
+    scrollX: 0,
+  })
+
+  let ref = React.createRef()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,8 +28,17 @@ function App() {
         <Balance />
         <AddForm />
       </div>
-      <div className="allcards-container">
-      <Card />
+      <div
+        className="allcards-container"
+        onMouseDown={(e) => {
+          setDrag({
+            ...drag,
+            isScrolling: true, 
+            clientX: e.clientX }
+          )
+        }}
+      >
+        <Card />
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-
-
 .App {
   text-align: center;
 }
@@ -31,11 +29,7 @@
 
 .header-wallet {
   margin-left: 8px;
-  color: #43cc1d;
-}
-
-.App-link {
-  color: #61dafb;
+  color: #85d66e;
 }
 
 @keyframes App-logo-spin {
@@ -51,7 +45,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
+  margin-bottom: 50px;
 }
 
 
@@ -67,42 +62,57 @@
 }
 
 .display-balance {
-  color: #43cc1d;
+  color: #85d66e;
   font-weight: bolder;
   font-size: 30px;
   margin-left: 10px;
 }
 
 #select-type {
-  height: 53px;
+  height: 50px;
+  border: 1px solid #85d66e;
+  border-right: none;
+  outline: none;
 }
 
 #add-transac {
-  height: 51px;
+  height: 50px;
   width: 400px;
   text-align: center;
   font-weight: bold;
-  border: 1.5px #43cc1d solid;
-  margin: 1px;
+  border: 1.5px #85d66e solid;
+  border-right: none;
+  background: #f5fff2;
   border-radius: 2px;
+  outline: none;
 }
 
 #add-transac:focus {
-  border: #43cc1d;
+  border: 1px solid #85d66e;
+  background: white;
 }
 
 .btn-add {
   width: 10em;
-  height: 53px;
+  height: 50px;
+  border-radius: 1px;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+  border: 1.5px #85d66e solid;
+  color: white;
+  background: #85d66e;
+  outline: none;
 }
-
-
 .btn-add:hover {
   color: white;
-  background: #43cc1d;
-  border-radius: 5px;
+  background: #b5e6a8;
+}
+button.add-earning:active {
+  background: #a8c1e6;
+}
+button.add-spending:active {
+  background: #e6a8a8;
 }
 
 .allcards-container {

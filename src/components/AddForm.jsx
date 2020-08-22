@@ -86,11 +86,11 @@ export default function AddForm () {
                 required
             />
 
-            <button className="btn-add" onClick={ () => {
+            <button className="btn-add add-earning" onClick={ () => {
                 document.getElementById("select-type").value = "" ;
                 onSubmitForm();
             }}>Earning</button>
-            <button className="btn-add" onClick={ () => {
+            <button className="btn-add add-spending" onClick={ () => {
                 document.getElementById("select-type").value = "";
                 onSubmitFormMinus()
             }}
