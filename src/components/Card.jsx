@@ -56,23 +56,27 @@ export default function Card() {
             
             return (
 
-                <div>
+                <div className="single-card">
 
-                    <div className="card-container">{eachTransac[0].year}.{eachTransac[0].month}</div>
+                    <div className="card-container-date">{eachTransac[0].year}.{eachTransac[0].month}</div>
     
                     {eachTransac.map((transc) => {
                         return (
                             <div key={transc.id} className="display-cards">
-                            <section>{transc.type}</section>
-                            <section>{transc.transac}$</section>
-                            <section><Moment >{transc.created_at}</Moment></section>
-                            <button className="btn-delete"
-                                onClick={() => {
-                                    // setBoolean(false)
-                                    return deleteTransac(transc.id)}}>
-                                Delete
-                            </button>
-                        </div>
+                                <div className="transac-type">
+                                    <section>{transc.type}</section>
+                                    <section>{transc.transac}$</section>
+                                </div>
+                                <div className="date-delete">
+                                    <section><Moment >{transc.created_at}</Moment></section>
+                                    <button className="btn-delete"
+                                        onClick={() => {
+                                            // setBoolean(false)
+                                            return deleteTransac(transc.id)}}>
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
                             
                         )
                     })}
@@ -118,15 +122,17 @@ export default function Card() {
                     output.push(copyTransacTwo[j]);
                 };                
             };
+            copyTranscOne.splice(copyTranscOne[i].month, 1);
             result.push(output);
-            copyTranscOne.splice(copyTranscOne[i], 2)
         }
         setDateTransac(result);
+
+
     }
     
     return (
-        <div className="cards-container" >
+        <>
             {displayCards()}
-        </div>
+        </>
     )
 }

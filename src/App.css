@@ -45,10 +45,6 @@
   }
 }
 
-.card-container {
-  border: 1px black solid;
-}
-
 .balance-add-container {
   display: flex;
   justify-content: center;
@@ -100,17 +96,6 @@
   cursor: pointer;
 }
 
-.btn-delete {
-  padding: 5px 10px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-.btn-delete:hover {
-  color: white;
-  background: #43cc1d;
-  border-radius: 5px;
-
-}
 
 .btn-add:hover {
   color: white;
@@ -120,23 +105,41 @@
 
 .allcards-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-wrap: nowrap;
+  overflow-x: auto;
   width: 100%;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
+.single-card {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  width: 300px;
+}
+
+.card-container-date {
+  background: #d4d4d4;
 }
 
 .display-cards{
-  margin: 10px;
-  padding: 20px;
-  border: 2px #43cc1d solid;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 2px #43cc1d solid;
+
+}
+
+.transac-type, .date-delete {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-delete {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  color: white;
+  background: #43cc1d;
+  border-radius: 5px;
+
 }

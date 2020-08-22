@@ -4,14 +4,14 @@
         "year": "2019",
         "month": "12",
         "type": "Entertainment",
-        "transac": "56"
+        "transac": "-56"
     },
     {
         "created_at": "2019-12-15",
         "year": "2019",
         "month": "12",
         "type": "Food",
-        "transac": "200"
+        "transac": "-200"
     },
     {
         "created_at": "2019-12-29",
@@ -39,21 +39,21 @@
         "year": "2020",
         "month": "2",
         "type": "Groceries",
-        "transac": "15"
+        "transac": "-29"
     },
     {
         "created_at": "2020-02-20",
         "year": "2020",
         "month": "2",
         "type": "Food",
-        "transac": "19"
+        "transac": "-19"
     },
     {
         "created_at": "2020-03-22",
         "year": "2020",
         "month": "3",
         "type": "Other",
-        "transac": "20"
+        "transac": "-20"
     },
     {
         "created_at": "2020-04-02",
@@ -67,21 +67,21 @@
         "year": "2020",
         "month": "4",
         "type": "Transportation",
-        "transac": "15"
+        "transac": "-15"
     },
     {
         "created_at": "2020-04-21",
         "year": "2020",
         "month": "4",
         "type": "Food",
-        "transac": "15"
+        "transac": "-15"
     },
     {
         "created_at": "2020-05-15",
         "year": "2020",
         "month": "5",
         "type": "Housing",
-        "transac": "1500"
+        "transac": "-1500"
     },
     {
         "created_at": "2020-05-27",
@@ -95,21 +95,21 @@
         "year": "2020",
         "month": "6",
         "type": "Groceries",
-        "transac": "219"
+        "transac": "-219"
     },
     {
         "created_at": "2020-06-09",
         "year": "2020",
         "month": "6",
         "type": "Shopping",
-        "transac": "138"
+        "transac": "-138"
     },
     {
         "created_at": "2020-06-12",
         "year": "2020",
         "month": "6",
         "type": "Healthcare",
-        "transac": "98"
+        "transac": "-98"
     },
     {
         "created_at": "2020-06-27",
@@ -130,14 +130,14 @@
         "year": "2020",
         "month": "7",
         "type": "Other",
-        "transac": "23"
+        "transac": "-23"
     },
     {
         "created_at": "2020-07-25",
         "year": "2020",
         "month": "7",
         "type": "Housing",
-        "transac": "1000"
+        "transac": "-1000"
     },
     {
         "created_at": "2020-07-27",
