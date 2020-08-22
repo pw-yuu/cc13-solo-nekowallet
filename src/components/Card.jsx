@@ -53,19 +53,50 @@ export default function Card() {
     
     function displayCards() {
         return dateTransac.map((eachTransac) => {
-            
+            // console.log(eachTransac);
             return (
 
                 <div className="single-card">
 
                     <div className="card-container-date">{eachTransac[0].year}.{eachTransac[0].month}</div>
+                    
+                    <div className="sum-transactions">
+                        <section className="sum-earning">
+                            <span className="sum-text">Earning:</span>
+                            {eachTransac
+                                .map((transc) => transc.transac)
+                                .filter((oneTranc) => {
+                                    return Number(oneTranc) > 0})
+                                .reduce((acc, curr, i, arr) => {
+                                    return Number(acc) + Number(curr)
+                                }, 0) 
+                            }
+                        </section>
+                        <section className="sum-spending">
+                            <span className="sum-text">Earning:</span> 
+                            {eachTransac
+                                .map((transc) => transc.transac)
+                                .filter((oneTranc) => {
+                                    return Number(oneTranc) < 0})
+                                .reduce((acc, curr, i, arr) => {
+                                    return Number(acc) + Number(curr)
+                                }, 0) 
+                            }
+                        </section>
+                    </div>
+
     
                     {eachTransac.map((transc) => {
                         return (
                             <div key={transc.id} className="display-cards">
+
                                 <div className="transac-type">
                                     <section>{transc.type}</section>
-                                    <section>{transc.transac}$</section>
+
+                                    {transc.transac > 0 ? <section className="positive-transac">{transc.transac}$</section> : <section className="negative-transac">{transc.transac}$</section>}
+
+
+                                    {/* <section>{transc.transac}$</section> */}
                                 </div>
                                 <div className="date-delete">
                                     <section><Moment >{transc.created_at}</Moment></section>
@@ -73,7 +104,7 @@ export default function Card() {
                                         onClick={() => {
                                             // setBoolean(false)
                                             return deleteTransac(transc.id)}}>
-                                        Delete
+                                        delete
                                     </button>
                                 </div>
                             </div>

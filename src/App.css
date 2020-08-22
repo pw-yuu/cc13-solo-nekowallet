@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -117,15 +119,48 @@
 }
 
 .card-container-date {
-  background: #d4d4d4;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  background: #b5e6a8;
+}
+
+.sum-transactions {
+  display: flex;
+  justify-content: space-evenly;
+}
+span.sum-text {
+  margin-right: 10px;
+}
+
+.sum-earning {
+  width: 50%;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  background: #1d54cc;
+}
+.sum-spending {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  background: #cc461d;
 }
 
 .display-cards{
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border-top: 2px #43cc1d solid;
-
+  border-top: 1px #b5e6a8 solid;
+  line-height: 1.8;
 }
 
 .transac-type, .date-delete {
@@ -133,13 +168,36 @@
   justify-content: space-between;
 }
 
+.transac-type {
+  font-weight: bold;
+}
+
+.date-delete {
+  font-size: 12px;
+  font-weight: 600;
+  color: #adadad;
+}
+
 .btn-delete {
-  padding: 5px 10px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #adadad;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #b5e6a8;
   cursor: pointer;
 }
 .btn-delete:hover {
   color: white;
-  background: #43cc1d;
+  background: #b5e6a8;
   border-radius: 5px;
 
+}
+
+.positive-transac {
+  color: #a8c1e6;
+}
+.negative-transac {
+  color: #e6a8a8;
 }
